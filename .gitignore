@@ -91,3 +91,6 @@ sympy-plots-for-*.tex/
 # Temporary Files
 .project
 ~*.*
+
+# Dev Folder
+dev/
