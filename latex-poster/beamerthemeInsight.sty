@@ -1,0 +1,120 @@
+% Insight Beamer Poster Template Theme
+\ProvidesPackage{beamerthemeInsight} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{insightcolours}
+\selectcolormodel{cmyk}
+\mode<presentation>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{headline}{fg=white,bg=pantone_124_16}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=pantone_120_2}
+\setbeamercolor{institute in headline}{fg=pantone_120_2}
+
+\setbeamercolor*{block title}{fg=pantone_117_8}
+\setbeamerfont{block title}{size=\large,series=\bf}
+\setbeamercolor*{normal text}{fg=black, bg=white}
+
+\setbeamercolor{framesubtitle}{fg=pantone_127_4, bg=white}
+
+%\setbeamercolor{footline}{fg=pantone_124_16, bg=white}
+%\setbeamerfont{footline}{size=\large,series=\tt}
+%\setbeamercolor{author in head/foot}{fg=pantone_120_2, bg=white}
+%\setbeamercolor{title in head/foot}{fg=pantone_120_2, bg=white}
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+\leavevmode
+\begin{overpic}[width=\paperwidth]{header}  %% debug: ,grid,tics=1
+% Mesh Pattern
+\put(20,1.5){
+\begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.65,xscale=0.65,inner sep=0pt,outer sep=0pt,opacity=0.5]
+\clip (2100,900) rectangle (10,250);
+\input{meshpattern.tikz}
+\end{tikzpicture}
+}
+% Title, Author
+\put(4.1,5){
+\begin{beamercolorbox}[rounded=false,shadow=false]{}%
+        \raggedright        
+        \usebeamercolor{title in headline}{\color{fg}\veryHuge{\inserttitle}\\[1ex]}
+        \vskip2em
+        \usebeamercolor{author in headline}{\color{fg}\LARGE{\insertauthor}\\[1ex]}
+\end{beamercolorbox}
+}
+% Insight Logo:
+\put(74,5){
+\begin{tcolorbox}[enhanced,colframe=white,colback=white,width=31em,boxrule=3em,arc=35pt,sharp corners=north] 
+\usebeamerfont*{block title}
+\usebeamercolor{institute in headline}{\color{fg}\normalsize{Centre for \\[5pt] Data Analytics}\\[1ex]}
+\vskip3em
+\includegraphics{insightlogo}
+\end{tcolorbox}
+}
+\end{overpic}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+\begin{beamercolorbox}[rounded=true,shadow=false]{block title}%
+\usebeamerfont*{block title}\insertblocktitle
+%\leftskip=3em
+\end{beamercolorbox}%
+{\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+\usebeamerfont{block body}
+%\leftskip=3em
+\begin{beamercolorbox}[rounded=true,shadow=false,colsep*=.75ex]{block body}%
+\leftskip=3em
+\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+}
+\setbeamertemplate{block end}{
+\end{beamercolorbox}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+% Funding Notice:
+\begin{beamercolorbox}[rounded=false,shadow=false]{block body}%
+\usebeamerfont*{block body}
+\leftskip=6em
+\footnotesize{The Insight Centre for Data Analytics is supported by Science Foundation Ireland under Grant Number SFI/12/RC/2289}
+\end{beamercolorbox}
+\vskip1em
+\begin{overpic}[width=\paperwidth]{footer} % debug w ,grid,tics=1
+% Mesh Pattern:
+\put(35,0){
+\begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.6,xscale=0.6,inner sep=0pt,outer sep=0pt,opacity=0.25]
+\clip (2100,400) rectangle (260,191);
+\input{meshpattern.tikz}
+\end{tikzpicture}
+}
+% Institutions:
+\put(4,1){
+\resizebox{0.6\paperwidth}{!}{%
+\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
+\input{institutions.tikz}
+\end{tikzpicture}
+}%
+}
+% SFI Logo
+\put(87,1.5){
+\resizebox{0.1\paperwidth}{!}{%
+\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
+\input{sfi.tikz}
+\end{tikzpicture}
+}%
+}
+\end{overpic}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help alignment
+%\beamertemplategridbackground[1em]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
