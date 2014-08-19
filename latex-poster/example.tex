@@ -19,9 +19,8 @@
 %
 %\usepackage{ubuntufont/ubuntu}
 
-% Set Size of poster here: a0, a1, a2, a3, a4
-% A1 works, rest need realignment of logo + mesh pattern.
-\usepackage[orientation=portrait,size=a1,scale=1.4,debug]{beamerposter}
+% Set Size of poster here: a1, a2, a3 work well, a0 needs work.
+\usepackage[orientation=portrait,size=a3,scale=1.4,debug]{beamerposter}
 
 % Required Packages:
 \usepackage{amsmath,amsthm, amssymb, latexsym}
@@ -36,17 +35,19 @@
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
 \usetikzlibrary{shadings}
+
 % Optional Packages:
-%\usepackage{epstopdf}
-%
+%\usepackage{epstopdf} % \includegraphics converts eps to pdf 
+\usepackage{blindtext} % Example Text
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Settings:
 
 \graphicspath{{figures/}}
 \addtobeamertemplate{block begin}{}{\justifying} % Justify text
 
-\title{Adaptive Representations for\\Tracking Breaking News on Twitter}
-\author{Igor Brigadir, Derek Greene, P\'{a}draig Cunningham}
+\title{Your Poster Title Here}
+\author{First Author, Second Author, Third Author}
 \institute[Insight]{Centre for\\Data Analytics}
 
 \date{Aug. 31st, 2014}
@@ -60,20 +61,28 @@
 
 \begin{column}{.43\paperwidth}
 
-\begin{block}{Large Headings typeset in Ubuntu Regular, at 18 point on 21 point line spacing}
-All point sizes listed here are based on the A3-sized document template file. Body Text paragraphs are typest in Ubuntu Light, at 10 point on 16 point line space with 5 points space after.Body Text paragraphs are typest in Ubuntu Light, at 10 point on 16 point line space with 5 points space after.
-Body Text paragraphs are typest in Ubuntu 
-Light, at 10 point on 16
- point line space with 5 points space after. Body Text paragraphs are type\end{block}
+\begin{block}{First Large Heading Large Heading Large Heading}
+\blindtext
+\blinditemize
+\end{block}
+
+\vskip1em
+
+\begin{block}{Second Large Heading Large Heading Large Heading}
+\blinddescription
+\blindtext
+\end{block}
  
 \end{column}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{column}{.43\paperwidth}
 
-\begin{block}{Large Headings typeset in Ubuntu Regular, at 18 point on 21 point line spacing}
-
-All point sizes listed here are based on the A3-sized document template file. Body Text paragraphs are typest in Ubuntu Light, at 10 point on 16 point line space with 5 points space after.Body Text paragraphs are typest in Ubuntu Light, at 10 point on 16 point line space with 5 points space after. Body Text paragraphs are typest in Ubuntu Light, at 10 point on 16 point line space with 5 points space after. Body Text paragraphs are typest i
+\begin{block}{Math Large Headings typeset}
+\blindmathtrue
+\blindtext
 \end{block}
+
+\vskip1em
 
 \begin{block}{Introduction}
 	\begin{itemize}
@@ -87,14 +96,7 @@ All point sizes listed here are based on the A3-sized document template file. Bo
 	
 \end{block}
 
-\begin{block}{Introduction}
-	\begin{itemize}
-		\item some items
-		\item some items
-		\item some items
-		\item some items
-	\end{itemize}
-\end{block}
+\vskip1em
 
 \begin{block}{Introduction}
 	\begin{itemize}
@@ -104,7 +106,9 @@ All point sizes listed here are based on the A3-sized document template file. Bo
 		\item some items
 	\end{itemize}
 	
-	$$\alpha=\gamma, \sum_{i}$$
+	% Big Math Example:
+	{\veryHuge $$\alpha=\gamma, \sum_{i}$$}\par 
+
 
 \end{block}
     

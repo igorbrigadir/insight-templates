@@ -32,7 +32,7 @@
 \begin{overpic}[width=\paperwidth]{header}  %% debug: ,grid,tics=1
 % Mesh Pattern
 \put(20,1.5){
-\begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.65,xscale=0.65,inner sep=0pt,outer sep=0pt,opacity=0.5]
+\begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.65,xscale=0.65,inner sep=0pt,outer sep=0pt,opacity=0.25]
 \clip (2100,900) rectangle (10,250);
 \input{meshpattern.tikz}
 \end{tikzpicture}
@@ -52,7 +52,9 @@
 \usebeamerfont*{block title}
 \usebeamercolor{institute in headline}{\color{fg}\normalsize{Centre for \\[5pt] Data Analytics}\\[1ex]}
 \vskip3em
-\includegraphics{insightlogo}
+
+\includegraphics[width=\textwidth]{insightlogo}
+
 \end{tcolorbox}
 }
 \end{overpic}
@@ -87,10 +89,10 @@
 \end{beamercolorbox}
 \vskip1em
 \begin{overpic}[width=\paperwidth]{footer} % debug w ,grid,tics=1
-% Mesh Pattern:
+% Mesh Pattern: % TODO: FIX
 \put(35,0){
 \begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.6,xscale=0.6,inner sep=0pt,outer sep=0pt,opacity=0.25]
-\clip (2100,400) rectangle (260,191);
+\clip (2100,295) rectangle (10,291);
 \input{meshpattern.tikz}
 \end{tikzpicture}
 }
