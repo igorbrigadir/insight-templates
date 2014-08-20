@@ -17,3 +17,8 @@ Download, unzip:
 ```bash
 $ sudo make install
 ```
+Problems?
+The TeX StackExchange is a great place: http://tex.stackexchange.com/
+Report issues with the templates here: https://github.com/igorbrigadir/insight-templates/issues
+
+Pull requests welcome!
