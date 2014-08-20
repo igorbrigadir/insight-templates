@@ -37,6 +37,11 @@ Download, unzip:
 $ sudo make install
 ```
 
+If that fails, try local install:
+```bash
+$ make PREFIX=~/texmf install
+```
+
 Problems?
 ------
 The TeX StackExchange is a great place: http://tex.stackexchange.com/
