@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Insight Poster Template v0.1
+% Insight Poster Template v0.1.1
 %
 % https://github.com/igorbrigadir/insight-templates
 %
@@ -7,18 +7,16 @@
 % http://www.ctan.org/pkg/beamerposter
 % http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php
 %
-% Most likely needs up to date TeX (Tested with TeX Live 2014)
+% Needs up to date TeX (Tested with TeX 2014)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 \mode<presentation>{\usetheme{Insight}}
 
-% Uncomment to use Ubuntu Font, if installed.
-% 
 % To install ubuntu fonts in LaTeX:
 % https://github.com/tzwenn/ubuntu-latex-fonts
 %
-%\usepackage{ubuntufont/ubuntu}
+\usepackage{ubuntu}
 
 % Set Size of poster with size= property: a1, a2, a3
 \usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
@@ -31,7 +29,6 @@
 \usepackage{tikz}
 \usepackage{graphics}
 \usepackage{overpic}
-\usepackage{setspace}
 \usepackage{ragged2e}
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
@@ -45,10 +42,11 @@
 % Settings:
 
 \graphicspath{{figures/}}
+
 \addtobeamertemplate{block begin}{}{\justifying} % Justify text
 
-\title{Your Poster Title Here}
-\author{First Author, Second Author, Third Author}
+\title{Ubuntu Light 50 point\\on 59 point line spacing}
+\author{Ubuntu Medium, 18 point on 20 point line spacing C25 M0 Y04 K06 a1}
 \institute[Insight]{Centre for\\Data Analytics}
 
 \date{Aug. 31st, 2014}
@@ -59,26 +57,39 @@
 % Two Columns:
 
 \begin{columns}[T]
-
 \begin{column}{.43\paperwidth}
 
-\begin{block}{First Large Heading Large Heading Large Heading}
+\begin{block}{Large Headings typeset in Ubuntu Regular, at 18 point on 21 point line spacing}
+
+bla bla bla a0 0
+
+\blocksubtitle{Subheading in u block test}
+
 \blindtext
+
+
+\blocksubtitle{Subhead block b54}
+
 \blinditemize
+
 \end{block}
+
 
 \vskip1em
 
 \begin{block}{Second Large Heading Large Heading Large Heading}
 \blinddescription
+
+\blocksubtitle{Subheading in u block test}
 \blindtext
+
 \end{block}
  
 \end{column}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{column}{.43\paperwidth}
 
-\begin{block}{Math Large Headings typeset}
+\begin{block}{Large Heading colour is C100 M0 Y0 K48}
 \blindmathtrue
 \blindtext
 \end{block}
@@ -113,13 +124,15 @@
 \end{block}
     
 \end{column}
-
 \end{columns}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Single column example (useful for images)
-\vfill    
+
+\begin{columns}[T]
+\begin{column}{.86\paperwidth}
+
 \begin{block}{}
-	\centering
+\centering
 	{\tiny tiny}\par
 	{\scriptsize scriptsize}\par
 	{\footnotesize footnotesize}\par
@@ -127,11 +140,15 @@
 	{\large large}\par
 	{\Large Large}\par
 	{\LARGE LARGE}\par
-	{\veryHuge VeryHuge}\par
+	{\veryHuge veryHuge}\par
 	{\VeryHuge VeryHuge}\par
 	{\VERYHuge VERYHuge}\par
 \end{block}
-\vfill
+
+\end{column}
+\end{columns}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{frame}
 \end{document}

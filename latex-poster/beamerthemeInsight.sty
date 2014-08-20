@@ -6,22 +6,30 @@
 \mode<presentation>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamercolor{headline}{fg=white,bg=pantone_124_16}
-\setbeamercolor{title in headline}{fg=white}
-\setbeamercolor{author in headline}{fg=pantone_120_2}
-\setbeamercolor{institute in headline}{fg=pantone_120_2}
+
+\setbeamercolor*{title in headline}{fg=white}
+\setbeamerfont*{title in headline}{size=\VeryHuge,family=\fontUbuntuLight}
+
+\setbeamercolor*{author in headline}{fg=pantone_119_1}
+\setbeamerfont*{author in headline}{size=\Large,family=\fontUbuntuMedium}
+
+\setbeamercolor{institute in headline}{fg=pantone_174_6}
+\setbeamerfont*{institute in headline}{size=\normalsize,family=\fontUbuntuLight}
 
 \setbeamercolor*{block title}{fg=pantone_117_8}
-\setbeamerfont{block title}{size=\large,series=\bf}
+\setbeamerfont*{block title}{size=\Large,family=\fontUbuntu}
+
+\setbeamercolor*{block subtitle}{fg=pantone_117_8}
+\setbeamerfont*{block subtitle}{size=\normalsize,family=\fontUbuntu}
+
 \setbeamercolor*{normal text}{fg=black, bg=white}
+\setbeamerfont*{normal text}{size=\Large,family=\fontUbuntuLight}
 
-\setbeamercolor{framesubtitle}{fg=pantone_127_4, bg=white}
 
-%\setbeamercolor{footline}{fg=pantone_124_16, bg=white}
-%\setbeamerfont{footline}{size=\large,series=\tt}
-%\setbeamercolor{author in head/foot}{fg=pantone_120_2, bg=white}
-%\setbeamercolor{title in head/foot}{fg=pantone_120_2, bg=white}
+\setbeamertemplate{itemize item}{\color{pantone_117_8}\textbullet}
+\setbeamertemplate{itemize subitem}{\color{pantone_117_8}\textbullet}
+\setlength{\leftmargini}{0em} % TODO: Fix Indents
 
-\setbeamertemplate{itemize items}[triangle]
 \setbeamertemplate{navigation symbols}{}  % no navigation on a poster
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,85 +38,105 @@
 \setbeamertemplate{headline}{  
 \leavevmode
 \begin{overpic}[width=\paperwidth]{header}  %% debug: ,grid,tics=1
+
 % Mesh Pattern
 \put(37.4,1.35){
-\begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.65,xscale=0.65,inner sep=0pt,outer sep=0pt,opacity=0.6]
-\clip (2800,1200) rectangle (0,260);
-\input{meshpattern.tikz}
-\end{tikzpicture}
+	\begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.65,xscale=0.65,inner sep=0pt,outer sep=0pt,opacity=0.6]
+		\clip (2800,1200) rectangle (0,260);
+		\input{meshpattern.tikz}
+	\end{tikzpicture}
 }
+
 % Title, Author
-\put(4.1,5){
+\put(4.1,2){
 \begin{beamercolorbox}[rounded=false,shadow=false]{}%
-        \raggedright        
-        \usebeamercolor{title in headline}{\color{fg}\veryHuge{\inserttitle}\\[1ex]}
-        \vskip2em
-        \usebeamercolor{author in headline}{\color{fg}\LARGE{\insertauthor}\\[1ex]}
+	\raggedright
+	{\usebeamerfont{title in headline}\usebeamercolor{title in headline}{\color{fg}\inserttitle\\[1ex]}}
+	\vskip2em
+	{\usebeamerfont{author in headline}\usebeamercolor{author in headline}{\color{fg}\insertauthor\\[1ex]}}
 \end{beamercolorbox}
 }
+
 % Insight Logo:
-\put(74,6){
-\begin{tcolorbox}[enhanced,colframe=white,colback=white,width=31em,boxrule=3em,arc=35pt,sharp corners=north] 
-\usebeamerfont*{block title}
-\usebeamercolor{institute in headline}{\color{fg}\normalsize{Centre for \\[5pt] Data Analytics}\\[1ex]}
-\vskip3em
-\includegraphics[width=\textwidth]{insightlogo}
+\put(74,5){
+\begin{tcolorbox}[enhanced,colframe=white,colback=white,width=33em,boxrule=1.5em,arc=35pt,sharp corners=north]
+	\vskip2em
+	{\usebeamerfont{institute in headline}\usebeamercolor{institute in headline}{\color{fg}Centre for \\[0.25em] Data Analytics}}
+	\vskip6em
+	\includegraphics[width=\textwidth]{insightlogo}\\[1em]
 \end{tcolorbox}
 }
+
 \end{overpic}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Blocks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{block begin}{
-\begin{beamercolorbox}[rounded=true,shadow=false]{block title}%
-\usebeamerfont*{block title}\insertblocktitle
-%\leftskip=3em
+%\leftskip=6em
+\begin{beamercolorbox}{block title}%
+	{\usebeamerfont*{block title}\insertblocktitle}
 \end{beamercolorbox}%
+
 {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
-\usebeamerfont{block body}
-%\leftskip=3em
-\begin{beamercolorbox}[rounded=true,shadow=false,colsep*=.75ex]{block body}%
-\leftskip=3em
-\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+
+\begin{beamercolorbox}[colsep*=.75ex]{block body}%
+%\usebeamerfont*{block body}
+\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}
 }
+
 \setbeamertemplate{block end}{
 \end{beamercolorbox}
+\vskip1em
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sub Headings:
+\newcommand\blocksubtitle[1]{%
+\vskip1em
+\begin{beamercolorbox}{block subtitle}%
+	{\usebeamerfont*{block subtitle}#1}
+\end{beamercolorbox}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Footer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{footline}{
+
 % Funding Notice:
-\begin{beamercolorbox}[rounded=false,shadow=false]{block body}%
-\usebeamerfont*{block body}
+\begin{beamercolorbox}{block body}%
 \leftskip=6em
 \footnotesize{The Insight Centre for Data Analytics is supported by Science Foundation Ireland under Grant Number SFI/12/RC/2289}
 \end{beamercolorbox}
+
 \vskip1em
+
 \begin{overpic}[width=\paperwidth]{footer} % debug w ,grid,tics=1
+
 % Mesh Pattern: % TODO: fix for other sizes
 \put(45,-7.4){
-\begin{tikzpicture}[y=1pt,x=1pt,yscale=0.6,xscale=0.6,inner sep=0pt,outer sep=0pt,opacity=0.4]
-\clip (3000,590) rectangle (0,0);
-\input{meshpattern.tikz}
-\end{tikzpicture}
+	\begin{tikzpicture}[y=1pt,x=1pt,yscale=0.6,xscale=0.6,inner sep=0pt,outer sep=0pt,opacity=0.4]
+	\clip (3000,590) rectangle (0,0);
+	\input{meshpattern.tikz}
+	\end{tikzpicture}
 }
+
 % Institutions:
 \put(4,1){
-\resizebox{0.6\paperwidth}{!}{%
-\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
-\input{institutions.tikz}
-\end{tikzpicture}
-}%
+	\resizebox{0.6\paperwidth}{!}{%
+	\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
+	\input{institutions.tikz}
+	\end{tikzpicture}
+	}%
 }
+
 % SFI Logo
 \put(87,1.5){
-\resizebox{0.1\paperwidth}{!}{%
-\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
-\input{sfi.tikz}
-\end{tikzpicture}
-}%
+	\resizebox{0.1\paperwidth}{!}{%
+	\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
+	\input{sfi.tikz}
+	\end{tikzpicture}
+	}%
 }
 \end{overpic}
 }
