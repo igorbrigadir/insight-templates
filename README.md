@@ -5,6 +5,7 @@ LaTeX Templates for Insight Centre for Data Analytics Posters & Presentations.
 
 Poster Template is based on [```beamerposter```](http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php) class. [More examples here](http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php#example).
 
+Note: Templates may change, future versions may break things - don't forget to update the document preamble, otherwise it is safe to overwrite everything else.
 
 Requires up to date TeX distribution:
 ------
