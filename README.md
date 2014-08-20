@@ -27,9 +27,7 @@ Windows:
 ------
 https://www.tug.org/texlive/windows.html
 
-
-
-(Optional) Ubuntu Fonts for LaTeX
+Requires Ubuntu Fonts for LaTeX
 ------
 [```tzwenn/ubuntu-latex-fonts```](https://github.com/tzwenn/ubuntu-latex-fonts)
 Download, unzip:
