@@ -1,0 +1,70 @@
+\RequirePackage{calc}
+\RequirePackage{ifthen}
+
+\mode<presentation>
+
+
+\pgfdeclareimage[width=\paperwidth]{insightTitleBackground}{beamerthemeinsight/insight_title_slide_background.png}
+\pgfdeclareimage[width=\paperwidth]{insightSlideBackground}{beamerthemeinsight/insight_slide_background.png}
+
+
+\defbeamertemplate*{navigation symbols}{}  %remove navigation symbols
+
+\defbeamertemplate*{footline}{}{
+  \ifnum\c@framenumber=1\else
+    \leavevmode%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=9pt,dp=9pt,center]{footer}%
+    Insight Centre for Data Analytics
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.66\paperwidth,ht=9pt,dp=9pt,right]{footer}%
+    \insertshortdate\hspace*{5em}
+    Slide \insertframenumber
+  \end{beamercolorbox}%
+  \vskip0pt%
+  \fi
+}
+
+
+% ---------- Background images ----------
+\defbeamertemplate*{background canvas}{} {
+  \ifnum\c@framenumber=1
+    \pgfuseimage{insightTitleBackground}
+  \else
+    \pgfuseimage{insightSlideBackground}
+  \fi
+}
+
+
+% ---------- Title Frame Layout ----------
+\defbeamertemplate*{title page}{}{
+  \vskip9ex
+  \raggedright
+  \usebeamerfont{title}
+  \usebeamercolor[fg]{title}
+  \inserttitle\par
+
+  \ifx\insertsubtitle\@empty
+  \else
+    \vskip2ex
+    {\raggedright\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+  \fi
+  \vfill
+
+  \ifx\insertauthor\@empty
+  \else
+    \vskip2ex
+    {\raggedright\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par}
+  \fi
+  \vfill
+
+  \ifx\insertdate\@empty
+  \else
+    \vskip2ex
+    {\raggedright\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}
+  \fi
+}
+
+\setbeamertemplate{itemize item}{\vspace{-1ex}\small\raise0.5pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subitem}{\vspace{-1ex}\footnotesize\raise0.5pt\hbox{\textbullet}}
+\setbeamertemplate{itemize subsubitem}{\vspace{-1ex}\footnotesize\raise0.5pt\hbox{\textbullet}}
+\setbeamersize{description width={2ex}}  % Label with in description env is huge by default, reduce it.
