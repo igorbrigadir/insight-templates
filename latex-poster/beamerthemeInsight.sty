@@ -98,6 +98,19 @@
 \end{beamercolorbox}%
 }
 
+\makeatletter
+\renewcommand{\section}{\@startsection
+{section}{1}{0mm}{-\baselineskip}{1mm}{\Large\color{pantone_117_8}\fontUbuntu}}
+\renewcommand{\subsection}{\@startsection
+{subsection}{2}{0mm}{-0.9\baselineskip}{1mm}{\normalsize\color{pantone_117_8}\fontUbuntu}}
+\renewcommand{\subsubsection}{\@startsection
+{subsubsection}{3}{0mm}{-0.7\baselineskip}{1mm}{\normalsize\color{pantone_117_8}\fontUbuntu}}
+%\renewcommand{\paragraph}{\@startsection
+%{paragraph}{4}{0mm}{-0.7\baselineskip}{1mm}{\normalsize\fontUbuntuBold}}
+\makeatother
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Footer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
