@@ -1,5 +1,5 @@
 % Insight Beamer Poster Template Theme
-\ProvidesPackage{beamerthemeInsight} 
+\ProvidesPackage{beamerthemeInsight}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{insightcolours}
 \selectcolormodel{cmyk}
@@ -75,7 +75,7 @@
 \setbeamertemplate{block begin}{
 %\leftskip=6em
 \begin{beamercolorbox}{block title}%
-	{\usebeamerfont*{block title}\insertblocktitle}
+	{\usebeamerfont*{block title} \setlength\lineskip{2em} \insertblocktitle}
 \end{beamercolorbox}%
 
 {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
