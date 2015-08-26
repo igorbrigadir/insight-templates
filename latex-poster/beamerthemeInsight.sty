@@ -35,16 +35,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamertemplate{headline}{  
+\setbeamertemplate{headline}{
 \leavevmode
 \begin{overpic}[width=\paperwidth]{header}  %% debug: ,grid,tics=1
 
 % Mesh Pattern
 \put(37.4,1.35){
-	\begin{tikzpicture}[y=1pt,x=1pt,yscale=-0.65,xscale=0.65,inner sep=0pt,outer sep=0pt,opacity=0.6]
-		\clip (2800,1200) rectangle (0,260);
-		\input{meshpattern.tikz}
-	\end{tikzpicture}
+	\includegraphics{meshpattern1.pdf}
 }
 
 % Title, Author
@@ -59,7 +56,8 @@
 
 % Insight Logo:
 \put(74,5){
-\begin{tcolorbox}[enhanced,colframe=white,colback=white,width=33em,boxrule=1.5em,arc=35pt,sharp corners=north]
+% option:enhanced,sharp corners=north
+\begin{tcolorbox}[colframe=white,colback=white,width=33em,boxrule=1.5em,arc=35pt]
 	\vskip2em
 	{\usebeamerfont{institute in headline}\usebeamercolor{institute in headline}{\color{fg}Centre for \\[0.25em] Data Analytics}}
 	\vskip6em
@@ -128,27 +126,20 @@
 
 % Mesh Pattern: % TODO: fix for other sizes
 \put(45,-7.4){
-	\begin{tikzpicture}[y=1pt,x=1pt,yscale=0.6,xscale=0.6,inner sep=0pt,outer sep=0pt,opacity=0.4]
-	\clip (3000,590) rectangle (0,0);
-	\input{meshpattern.tikz}
-	\end{tikzpicture}
+	\includegraphics{meshpattern2.pdf}
 }
 
 % Institutions:
 \put(4,1){
-	\resizebox{0.6\paperwidth}{!}{%
-	\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
-	\input{institutions.tikz}
-	\end{tikzpicture}
+	\resizebox{0.6\paperwidth}{!}{
+	\includegraphics{institutions.pdf}
 	}%
 }
 
 % SFI Logo
 \put(87,1.5){
-	\resizebox{0.1\paperwidth}{!}{%
-	\begin{tikzpicture}[y=1pt,x=1pt,yscale=-1, inner sep=0pt, outer sep=0pt]
-	\input{sfi.tikz}
-	\end{tikzpicture}
+	\resizebox{0.1\paperwidth}{!}{
+	\includegraphics{sfi.pdf}
 	}%
 }
 \end{overpic}
