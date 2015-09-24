@@ -1,0 +1,85 @@
+%
+% Template With Headings
+%
+\documentclass[times, 10pt, twocolumn, a4paper]{article} 
+
+\usepackage{insight}
+\usepackage{times}
+
+% Not required, only for example:
+\usepackage{graphicx}
+\setlength{\belowcaptionskip}{-20pt}
+
+\pagestyle{empty} % no page numbers
+
+%=================================================================================================
+\begin{document}
+
+\title{Author Guidelines for Student Conference} % Your Catchy Title Goes Here
+
+\author{Author Name\\
+Insight Centre for Data Analytics\\ 
+E-mail author.name@insight-centre.org\\
+% For a paper whose authors are all at the same institution, 
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'', 
+% just like the second author.
+%\and
+%Second Author\\
+%Institution2\\
+%First line of institution2 address\\ Second line of institution2 address\\ 
+%SecondAuthor@institution2.com\\
+}
+
+\maketitle
+
+\thispagestyle{empty} % no page numbers
+
+%=================================================================================================
+\begin{abstract}
+The abstract is to be in fully-justified italicized text, at the top of the left-hand column as it is here, below the author information. Use the word “Abstract” as the title, in 12-point Times, boldface type, centered relative to the column, initially capitalized. The abstract is to be in 10-point, single-spaced type, and may be up to 3 in. (7.62 cm) long. Leave one blank lines after the abstract, then begin the main text
+\end{abstract}
+%================================================================================================= 
+\Section{Introduction}
+These guidelines include a description of the fonts, spacing, and related information for producing your proceedings manuscripts. If there is something left out improvise. 
+
+Please note that your abstract must not exceed 1 page in length. \cite{ex1}
+%=================================================================================================
+\Section{Formatting your paper}
+All printed material, including text, illustrations, and charts, must be kept within a print area of 6.875 inches (17.5 cm) wide by 9.575 inches (24.32 cm) high. Do not write or print anything outside the print area. All text must be in a two-column format. Columns are to be 3-1/4 inches (8.25 cm) wide, with a 5/16 inch (0.8 cm) space between them. Text must be fully justified.
+
+A format sheet with the margins and placement guides is available as a Word file, a PDF file, and a Postscript file. It contains lines and boxes showing the margins and print areas. If you hold it and your printed page up to the light, you can easily check your margins to see if your print area fits within the space allowed.
+%=================================================================================================
+\Section{Main title}
+The main title (on the first page) should begin 1-3/8 inches (3.49 cm) from the top edge of the page, centered, and in Times 14-point, boldface type. Capitalize the first letter of nouns, pronouns, verbs, adjectives, and adverbs; do not capitalize articles, coordinate conjunctions, or prepositions (unless the title begins with such a word). Leave two blank lines (pt10) after the title.
+%=================================================================================================
+\Section{Type-style and fonts}
+Wherever Times is specified, Times Roman, or New Times Roman may be used.
+
+\Section{Main text}
+Type your main text in 10-point Times, single-spaced. Do {\bf not} use double-spacing. All paragraphs should be indented 1 pica (approximately 1/6- or 0.17-inch or 0.422 cm). Be sure your text is fully justified—that is, flush left and flush right. Please do not place any additional blank lines between paragraphs. 
+
+{\bf Figure and table captions} should be 10-point Helvetica (or a similar sans-serif font), boldface. Callouts should be 9-point Helvetica, non-boldface. Initially capitalize only the first word of each figure caption and table title. Figures and tables must be numbered separately. \cite{ex2}
+%=================================================================================================
+\Section{First-order headings}
+For example, ``1. Introduction'', should be Times 12-point {\bf boldface}, initially capitalized, flush left, with one blank line before, and one blank line after. Use a period (``.'') after the heading number, not a colon.
+%=================================================================================================
+\SubSection{Second-order headings}
+As in this heading, they should be Times 11-point {\bf boldface}, initially capitalized, flush left, with one blank line before, and one after and one blank line after.
+%=================================================================================================
+\Section{Illustrations, graphs, and photographs}
+All graphics should be centered and placed close to their point of reference.
+%================================================================================================= 
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=4.5cm,height=3cm]{logo}
+\caption{Caption of figure goes here}
+\label{foo}
+\end{center}
+\end{figure}
+%=================================================================================================
+%\nocite{ex1,ex2} % nocite includes bib entries that are not cited explicitly
+\bibliographystyle{insight}
+\bibliography{abstractTemplate}
+
+\end{document}
