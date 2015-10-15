@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insight Poster Template v0.2.1
+%
+% https://github.com/igorbrigadir/insight-templates
+%
+% Based on beamerposter class 
+% http://www.ctan.org/pkg/beamerposter
+% http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php
+%
+% Needs up to date TeX (Tested with TeX 2014)
+%
+% To install ubuntu fonts in LaTeX:
+% https://github.com/tzwenn/ubuntu-latex-fonts
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+\mode<presentation>{\usetheme{Insight}}
+\usepackage{ubuntu}
+% Set Size of poster with size= property: a0, a1, a2, a3. Default is A0
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+% Required Packages:
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{tcolorbox}
+\usepackage{graphics}
+\usepackage{overpic}
+\usepackage{ragged2e}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\boldmath
+\tcbuselibrary{skins}
+\usetikzlibrary{shadings}
+\graphicspath{{figures/}} % Settings
+\addtobeamertemplate{block begin}{}{\justifying} % Justify text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Add any other Optional Packages Here:
+%\usepackage{epstopdf} % \includegraphics converts eps to pdf 
+\usepackage{blindtext} % Used for Example Text
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If you have a really long title, uncomment this next line:
+\setbeamerfont*{title in headline}{size=\veryHuge,family=\fontUbuntuLight}
+
+% A really long title example:
+\title{A Something something: Really really unnecessarily long title of your poster just because you can}
+
+% If you have a long title and or lots of authors, uncomment this next line:
+\setbeamerfont*{author in headline}{size=\large,family=\fontUbuntuMedium}
+
+% Use \\ if First and Second names get split between lines. Example:
+\author{Author One, Author Two, Reallylongfirstname Reallyreallylongsecondname, \\ Another Author, Someone Else, Another Person}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}{}
+\begin{columns}[T] % 2 Column Layout
+\begin{column}{.43\paperwidth} % Left Column
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LEFT COLUMN BLOCKS:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{block}{Large Headings typeset in Ubuntu Regular, at 18 point on 21 point line spacing}
+Text Here \dots
+
+\blocksubtitle{Subheading in u block test}
+More Text \blindtext
+\blocksubtitle{Subhead block b54}
+List Items \blinditemize
+\end{block}
+
+\begin{block}{Second Large Heading Large Heading Large Heading}
+Text Here \blinddescription
+\blocksubtitle{Subheading in block test}
+More Text \blindtext
+\end{block}
+
+\begin{block}{Large Heading colour is C100 M0 Y0 K48}
+Math example \blindmathtrue
+More Text \blindtext
+\end{block}
+
+
+\end{column}
+\begin{column}{.43\paperwidth} % Right Column
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RIGHT COLUMN BLOCKS:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{block}{Introduction}
+	\begin{itemize}
+		\item some items and $\alpha=\beta,\gamma_{i}$
+		\item some items
+		\item some items
+		\item some items
+	\end{itemize}
+
+	$$\Delta M_i^{-1} = - \alpha \sum_{n=1}^N D_i \left[ n \right] \left[ \sum_{j \in C \left[ i \right]}^{} F_{ji} \left[ n-1 \right] + Fext_i \left[ n^{-1} \right] \right]$$
+	
+\end{block}
+
+\begin{block}{Text sizes}
+\centering
+	{\tiny tiny}\par
+	{\scriptsize scriptsize}\par
+	{\footnotesize footnotesize}\par
+	{\normalsize normalsize}\par
+	{\large large}\par
+	{\Large Large}\par
+	{\LARGE LARGE}\par
+	{\veryHuge veryHuge}\par
+	{\VeryHuge VeryHuge}\par
+	{\VERYHuge VERYHuge}\par
+\end{block}
+
+\begin{block}{Graphics}
+\includegraphics[width=\textwidth]{insightlogo.pdf} \\
+Text Here \blindtext
+\blocksubtitle{Subheading in u block test}
+More Text \blindtext
+\end{block}
+
+\end{column}
+\end{columns}
+
+%% Span both columns example:
+
+%\begin{columns}[T]
+%\begin{column}{.86\paperwidth}
+%\begin{block}{}
+%\centering
+%	{\tiny tiny}\par
+%	{\scriptsize scriptsize}\par
+%	{\footnotesize footnotesize}\par
+%	{\normalsize normalsize}\par
+%	{\large large}\par
+%	{\Large Large}\par
+%	{\LARGE LARGE}\par
+%	{\veryHuge veryHuge}\par
+%	{\VeryHuge VeryHuge}\par
+%	{\VERYHuge VERYHuge}\par
+%\end{block}
+%\end{column}
+%\end{columns}
+
+\end{frame}
+\end{document}
