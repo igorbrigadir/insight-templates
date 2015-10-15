@@ -56,8 +56,7 @@
 
 % Insight Logo:
 \put(74,5){
-% option:enhanced,sharp corners=north
-\begin{tcolorbox}[colframe=white,colback=white,width=33em,boxrule=1.5em,arc=35pt]
+\begin{tcolorbox}[enhanced,colframe=white,colback=white,width=33em,boxrule=1.5em,arc=35pt,sharp corners=north]
 	\vskip2em
 	{\usebeamerfont{institute in headline}\usebeamercolor{institute in headline}{\color{fg}Centre for \\[0.25em] Data Analytics}}
 	\vskip6em
@@ -73,7 +72,8 @@
 \setbeamertemplate{block begin}{
 %\leftskip=6em
 \begin{beamercolorbox}{block title}%
-	{\usebeamerfont*{block title} \setlength\lineskip{2em} \insertblocktitle}
+	%{\usebeamerfont*{block title} \setlength\lineskip{2em} \insertblocktitle}
+	{\usebeamerfont*{block title}\insertblocktitle}
 \end{beamercolorbox}%
 
 {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
@@ -96,6 +96,7 @@
 \end{beamercolorbox}%
 }
 
+% ???
 \makeatletter
 \renewcommand{\section}{\@startsection
 {section}{1}{0mm}{-\baselineskip}{1mm}{\Large\color{pantone_117_8}\fontUbuntu}}
@@ -106,8 +107,6 @@
 %\renewcommand{\paragraph}{\@startsection
 %{paragraph}{4}{0mm}{-0.7\baselineskip}{1mm}{\normalsize\fontUbuntuBold}}
 \makeatother
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Footer
