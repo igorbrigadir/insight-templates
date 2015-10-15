@@ -25,12 +25,11 @@
 \setbeamercolor*{normal text}{fg=black, bg=white}
 \setbeamerfont*{normal text}{size=\Large,family=\fontUbuntuLight}
 
-
 \setbeamertemplate{itemize item}{\color{pantone_117_8}\textbullet}
 \setbeamertemplate{itemize subitem}{\color{pantone_117_8}\textbullet}
 \setlength{\leftmargini}{0em} % TODO: Fix Indents
 
-\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+\setbeamertemplate{navigation symbols}{} % no navigation on a poster
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header:
@@ -38,38 +37,34 @@
 \setbeamertemplate{headline}{
 \leavevmode
 \begin{overpic}[width=\paperwidth]{header}  %% debug: ,grid,tics=1
-
 % Mesh Pattern
 \put(37.4,1.35){
 	\includegraphics{meshpattern1.pdf}
 }
-
 % Title, Author
 \put(4.1,2){
-\begin{beamercolorbox}[rounded=false,shadow=false]{}%
+\begin{beamercolorbox}[rounded=false,shadow=false,wd=0.7\textwidth]{}%
 	\raggedright
-	{\usebeamerfont{title in headline}\usebeamercolor{title in headline}{\color{fg}\setlength\lineskip{0.9ex}\inserttitle\\[1ex]}}
-	\vskip2em
-	{\usebeamerfont{author in headline}\usebeamercolor{author in headline}{\color{fg}\insertauthor\\[1ex]}}
+	{\usebeamerfont{title in headline}\usebeamercolor{title in headline}{\color{fg}\setlength\lineskip{0.5ex}\inserttitle\\[1ex]}}
+	\vskip1em
+	{\usebeamerfont{author in headline}\usebeamercolor{author in headline}{\color{fg}\setlength\lineskip{0.5ex}\insertauthor\\[1ex]}}
 \end{beamercolorbox}
 }
-
 % Insight Logo:
 \put(74,5){
 \begin{tcolorbox}[enhanced,colframe=white,colback=white,width=33em,boxrule=1.5em,arc=35pt,sharp corners=north]
-	\vskip2em
+	\vskip3em
 	{\usebeamerfont{institute in headline}\usebeamercolor{institute in headline}{\color{fg}Centre for \\[0.25em] Data Analytics}}
 	\vskip6em
 	\includegraphics[width=\textwidth]{insightlogo}\\[1em]
 \end{tcolorbox}
 }
-
 \end{overpic}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Blocks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamertemplate{block begin}{
+\setbeamertemplate{block begin}{%
 %\leftskip=6em
 \begin{beamercolorbox}{block title}%
 	%{\usebeamerfont*{block title} \setlength\lineskip{2em} \insertblocktitle}
@@ -77,26 +72,24 @@
 \end{beamercolorbox}%
 
 {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
-
 \begin{beamercolorbox}[colsep*=.75ex]{block body}%
 %\usebeamerfont*{block body}
 \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}
 }
 
-\setbeamertemplate{block end}{
+\setbeamertemplate{block end}{%
+\vskip 1em
 \end{beamercolorbox}
-\vskip1em
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Sub Headings:
 \newcommand\blocksubtitle[1]{%
-\vskip1em
+\vskip 1em
 \begin{beamercolorbox}{block subtitle}%
 	{\usebeamerfont*{block subtitle}#1}
 \end{beamercolorbox}%
 }
-
-% ???
+%
 \makeatletter
 \renewcommand{\section}{\@startsection
 {section}{1}{0mm}{-\baselineskip}{1mm}{\Large\color{pantone_117_8}\fontUbuntu}}
@@ -112,29 +105,23 @@
 % Footer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{footline}{
-
 % Funding Notice:
 \begin{beamercolorbox}{block body}%
-\leftskip=6em
+\leftskip=7.75em
 \footnotesize{The Insight Centre for Data Analytics is supported by Science Foundation Ireland under Grant Number SFI/12/RC/2289}
 \end{beamercolorbox}
-
-\vskip1em
-
+\vskip 1em
 \begin{overpic}[width=\paperwidth]{footer} % debug w ,grid,tics=1
-
 % Mesh Pattern: % TODO: fix for other sizes
 \put(45,-7.4){
 	\includegraphics{meshpattern2.pdf}
 }
-
 % Institutions:
 \put(4,1){
 	\resizebox{0.6\paperwidth}{!}{
 	\includegraphics{institutions.pdf}
 	}%
 }
-
 % SFI Logo
 \put(87,1.5){
 	\resizebox{0.1\paperwidth}{!}{
