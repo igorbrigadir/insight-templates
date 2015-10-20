@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insight Poster Template v0.3.2
+%
+% https://github.com/igorbrigadir/insight-templates
+%
+% Based on beamerposter class 
+% http://www.ctan.org/pkg/beamerposter
+% http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php
+%
+% Needs up to date TeX (Tested with TeX 2014)
+%
+% To install ubuntu fonts in LaTeX:
+% https://github.com/tzwenn/ubuntu-latex-fonts
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+\mode<presentation>{\usetheme{Insight}}
+% Required Packages:
+\usepackage[utf8]{inputenc}
+\PassOptionsToPackage{cmyk}{xcolor}% NB
+\usepackage{ubuntu}
+
+% Set Size of poster with size= property: a0, a1, a2, a3. Default is A0
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{calc}
+\usepackage{tcolorbox}
+\usepackage{graphics}
+\usepackage[percent]{overpic}
+\usepackage{ragged2e}
+\usepackage{amsmath,amsthm, amssymb, latexsym}
+\boldmath
+\tcbuselibrary{skins}
+\usetikzlibrary{shadings}
+\graphicspath{{figures/}} % Settings
+\addtobeamertemplate{block begin}{}{\justifying} % Justify text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Add any other Optional Packages Here:
+%\usepackage{epstopdf} % \includegraphics converts eps to pdf 
+\usepackage{blindtext} % Used for Example Text
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If you have a really long title, uncomment this next line:
+% \setbeamerfont*{title in headline}{size=\veryHuge,family=\fontUbuntuLight}
+
+% A really long title example:
+% \title{A Something something: Really really unnecessarily long title of your poster just because}
+
+\title{Your title Here}
+
+% If you have a long title and or lots of authors, uncomment this next line:
+%\setbeamerfont*{author in headline}{size=\large,family=\fontUbuntuMedium}
+
+% Use \\ if First and Second names get split between lines. Example:
+%\author{Author One, Author Two, Reallylongfirstname Reallyreallylongsecondname, \\ Another Author, Someone Else, }
+
+\author{Firstname Lastname}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{frame}{}
+\begin{columns}[T] % 2 Column Layout
+\begin{column}{.43\paperwidth} % Left Column
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LEFT COLUMN BLOCKS:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{block}{Block Title}
+Text
+\blocksubtitle{Subheading}
+Text
+\end{block}
+
+% Add blocks here...
+
+\end{column}
+\begin{column}{.43\paperwidth} % Right Column
+% RIGHT COLUMN BLOCKS:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{block}{Block Title}
+Text
+\end{block}
+
+% Add blocks here...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}
