@@ -1,1 +1,0 @@
-These are used to generate the pdf files of logos. You don't need these.

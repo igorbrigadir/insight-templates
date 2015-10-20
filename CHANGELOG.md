@@ -1,3 +1,9 @@
+v0.3.1 (Oct 20, 2015)
+----------
+* Poster: Camera Ready
+* Poster: CMYK Colour Fix for Header & Footer
+* Poster: Make A0 Default
+
 v0.2.1 (Oct 15, 2015)
 ----------
 * Poster: Fixed Logo Rounded Corners

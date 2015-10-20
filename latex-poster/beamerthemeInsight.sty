@@ -5,7 +5,7 @@
 \selectcolormodel{cmyk}
 \mode<presentation>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamercolor{headline}{fg=white,bg=pantone_124_16}
+\setbeamercolor{headline}{fg=white,bg=white} % pantone_124_16
 
 \setbeamercolor*{title in headline}{fg=white}
 \setbeamerfont*{title in headline}{size=\VeryHuge,family=\fontUbuntuLight}
@@ -31,19 +31,26 @@
 
 \setbeamertemplate{navigation symbols}{} % no navigation on a poster
 
+%Global Background must be put in preamble
+\usebackgroundtemplate%
+{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{page-back}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{headline}{
 \leavevmode
-\begin{overpic}[width=\paperwidth]{header}  %% debug: ,grid,tics=1
+\begin{overpic}[width=\paperwidth]{header-blank}  %% debug: ,grid,tics=1
+
 % Mesh Pattern
-\put(37.4,1.35){
-	\includegraphics{meshpattern1.pdf}
+\put(37.4,0.73){
+	\includegraphics[width=0.8\paperwidth]{meshpattern1.pdf}
 }
 % Title, Author
 \put(4.1,2){
-\begin{beamercolorbox}[rounded=false,shadow=false,wd=0.7\textwidth]{}%
+\begin{beamercolorbox}[wd=0.7\textwidth]{}%
 	\raggedright
 	{\usebeamerfont{title in headline}\usebeamercolor{title in headline}{\color{fg}\setlength\lineskip{0.5ex}\inserttitle\\[1ex]}}
 	\vskip1em
@@ -111,10 +118,10 @@
 \footnotesize{The Insight Centre for Data Analytics is supported by Science Foundation Ireland under Grant Number SFI/12/RC/2289}
 \end{beamercolorbox}
 \vskip 1em
-\begin{overpic}[width=\paperwidth]{footer} % debug w ,grid,tics=1
+\begin{overpic}[width=\paperwidth]{footer-blank} % debug w ,grid,tics=1
 % Mesh Pattern: % TODO: fix for other sizes
-\put(45,-7.4){
-	\includegraphics{meshpattern2.pdf}
+\put(45,-7.35){
+	\includegraphics[width=0.75\paperwidth]{meshpattern2.pdf}
 }
 % Institutions:
 \put(4,1){
