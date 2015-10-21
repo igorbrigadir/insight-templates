@@ -11,18 +11,18 @@
 %
 % To install ubuntu fonts in LaTeX:
 % https://github.com/tzwenn/ubuntu-latex-fonts
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Required Packages - Do not edit these:
 \documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
 \mode<presentation>{\usetheme{Insight}}
-% Required Packages:
 \usepackage[utf8]{inputenc}
-\PassOptionsToPackage{cmyk}{xcolor}% NB
+\PassOptionsToPackage{cmyk}{xcolor}
 \usepackage{ubuntu}
 
 % Set Size of poster with size= property: a0, a1, a2, a3. Default is A0
 \usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
 
+% Required Packages - Do not edit these:
 \usepackage[english]{babel}
 \usepackage{tikz}
 \usepackage{calc}
@@ -39,10 +39,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Add any other Optional Packages Here:
-%\usepackage{epstopdf} % \includegraphics converts eps to pdf 
-\usepackage{blindtext} % Used for Example Text
+%\usepackage{epstopdf} % \includegraphics converts eps to pdf
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % If you have a really long title, uncomment this next line:
 % \setbeamerfont*{title in headline}{size=\veryHuge,family=\fontUbuntuLight}
 
@@ -53,16 +51,25 @@
 
 % If you have a long title and or lots of authors, uncomment this next line:
 %\setbeamerfont*{author in headline}{size=\large,family=\fontUbuntuMedium}
-
 % Use \\ if First and Second names get split between lines. Example:
 %\author{Author One, Author Two, Reallylongfirstname Reallyreallylongsecondname, \\ Another Author, Someone Else, }
 
 \author{Firstname Lastname}
 
+% If you need to change the default Acknowledgement, uncomment & edit one of these lines:
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Default:
+%\renewcommand{\acknowledgements}{The Insight Centre for Data Analytics is supported by Science Foundation Ireland under Grant Number SFI/12/RC/2289}
+
+% Alternative Acknowledgement:
+%\renewcommand{\acknowledgements}{This publication has emanated from research conducted with the financial support of Science Foundation Ireland (SFI) under Grant Number SFI/12/RC/2289}
+
+% SFI & Some other funding:
+%\renewcommand{\acknowledgements}{This publication has emanated from research supported in part by a research grant from Science Foundation Ireland (SFI) under Grant Number SFI/12/RC/2289}
+
 \begin{document}
 \begin{frame}{}
+
 \begin{columns}[T] % 2 Column Layout
 \begin{column}{.43\paperwidth} % Left Column
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,10 +82,11 @@ Text
 Text
 \end{block}
 
-% Add blocks here...
+% Add more blocks here...
 
 \end{column}
 \begin{column}{.43\paperwidth} % Right Column
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RIGHT COLUMN BLOCKS:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -86,7 +94,7 @@ Text
 Text
 \end{block}
 
-% Add blocks here...
+% Add more blocks here...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{column}

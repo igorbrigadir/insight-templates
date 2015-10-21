@@ -23,7 +23,7 @@ $ sudo ./install-tl-ubuntu
 
 Mac OSX:
 ------
-Use MacTeX-2014:
+Use MacTeX-2014 or newer:
 https://www.tug.org/mactex/
 
 Windows:

@@ -1,3 +1,9 @@
+v0.3.2 (Oct 21, 2015)
+----------
+* Poster: Fix alignments for switching between A0, A1
+* Poster: Update Examples
+* Poster: Optional Funding Notice
+
 v0.3.1 (Oct 20, 2015)
 ----------
 * Poster: Camera Ready

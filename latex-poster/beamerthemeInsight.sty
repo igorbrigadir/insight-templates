@@ -2,6 +2,7 @@
 \ProvidesPackage{beamerthemeInsight}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{insightcolours}
+
 \selectcolormodel{cmyk}
 \mode<presentation>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,6 +37,9 @@
 {%
     \includegraphics[width=\paperwidth,height=\paperheight]{page-back}%
 }
+
+%Funding notice:
+\newcommand{\acknowledgements}{The Insight Centre for Data Analytics is supported by Science Foundation Ireland under Grant Number SFI/12/RC/2289}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header:
@@ -115,7 +119,7 @@
 % Funding Notice:
 \begin{beamercolorbox}{block body}%
 \leftskip=7.75em
-\footnotesize{The Insight Centre for Data Analytics is supported by Science Foundation Ireland under Grant Number SFI/12/RC/2289}
+\footnotesize{\acknowledgements}
 \end{beamercolorbox}
 \vskip 1em
 \begin{overpic}[width=\paperwidth]{footer-blank} % debug w ,grid,tics=1
