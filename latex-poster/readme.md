@@ -1,7 +1,7 @@
 Creating a new Poster:
 ======================
 
-Download Latest Poster Template Here: https://github.com/igorbrigadir/insight-templates/releases/download/v0.3.2/latex-poster.zip
+Download Latest Poster Template Here: https://github.com/igorbrigadir/insight-templates/releases/download/v0.3.3/latex-poster.zip
 
 Template creates A0 size by default, if you need A1, change the size in the document preamble:
 ```
