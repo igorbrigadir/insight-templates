@@ -7,7 +7,30 @@ Poster Template is based on [```beamerposter```](http://www-i6.informatik.rwth-a
 
 Note: Templates may change, future versions may break things - don't forget to update the document preamble, otherwise it is safe to overwrite everything else.
 
-Requires Ubuntu fonts & up to date TeX distribution!
+Installation Instructions:
+------
+Before you try to compile anything, install the fonts:
+
+```
+git clone https://github.com/tzwenn/ubuntu-latex-fonts.git
+cd ubuntu-latex-fonts
+make PREFIX=~/texmf install
+```
+
+Or:
+
+[```tzwenn/ubuntu-latex-fonts```](https://github.com/tzwenn/ubuntu-latex-fonts)
+Download, unzip:
+```bash
+$ sudo make install
+```
+
+If that fails, try local install:
+```bash
+$ make PREFIX=~/texmf install
+```
+
+Update your TeX distribution!
 ------
 
 Latest TeX distribution installation Instructions:
@@ -29,20 +52,6 @@ https://www.tug.org/mactex/
 Windows:
 ------
 https://www.tug.org/texlive/windows.html
-
-
-Ubuntu Fonts for LaTeX installation Instructions:
-------
-[```tzwenn/ubuntu-latex-fonts```](https://github.com/tzwenn/ubuntu-latex-fonts)
-Download, unzip:
-```bash
-$ sudo make install
-```
-
-If that fails, try local install:
-```bash
-$ make PREFIX=~/texmf install
-```
 
 Problems?
 ------
