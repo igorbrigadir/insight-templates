@@ -21,19 +21,6 @@ git clone https://github.com/igorbrigadir/insight-templates.git
 cd insight-templates
 ```
 
-Or:
-
-[```tzwenn/ubuntu-latex-fonts```](https://github.com/tzwenn/ubuntu-latex-fonts)
-Download, unzip:
-```bash
-$ sudo make install
-```
-
-If that fails, try local install:
-```bash
-$ make PREFIX=~/texmf install
-```
-
 Update your TeX distribution!
 ------
 
@@ -63,3 +50,22 @@ The TeX StackExchange is a great place: http://tex.stackexchange.com/
 Report issues with the templates here: https://github.com/igorbrigadir/insight-templates/issues
 
 Pull requests welcome!
+
+------
+
+If font installation fails:
+
+[```tzwenn/ubuntu-latex-fonts```](https://github.com/tzwenn/ubuntu-latex-fonts)
+Download, unzip:
+```bash
+$ sudo make install
+```
+
+If that fails, try local install:
+```bash
+$ make PREFIX=~/texmf install
+```
+
+-------
+
+Overleaf Example: [ToDo]
