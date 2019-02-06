@@ -1,0 +1,103 @@
+% % Run this command if command line preferred:
+% % latexmk -pvc -cd -e "\$pdflatex = 'pdflatex -shell-escape -interaction=nonstopmode -synctex=1 %O %S'" -f -pdf thesis.tex
+
+\documentclass[oneside,11pt]{Classes/CUEDthesisPSnPDF}
+
+\title{\sc{My Masterpiece}}
+
+\ifpdf
+  \author{\it{Me}}
+  \collegeordept{{Department of ...}}
+  \university{{School}}
+  % insert below the file name that contains the crest in-place of 'UnivShield'
+  \crest{\includegraphics[width = 40mm]{ThesisFigs/WITarms-cropped.pdf}}
+\else
+  \author{{Me}}
+  \collegeordept{Department of ...}
+  \university{School}
+% insert below the file name that contains the crest in-place of 'UnivShield'
+  \crest{\includegraphics[bb = 266 360 341 467]{ThesisFigs/WITarmsmono.pdf}}
+\fi
+
+\renewcommand{\submittedtext}{Thesis submitted in partial fulfilment of the requirements for the award of}
+\degree{Doctor of Philosophy}
+\supervisors{Under the supervision of:\\ Dr. x \\ Prof. y}
+\degreedate{Month Year}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+% ------------------------------------------------------------------------
+\begin{document}
+
+%\language{english}
+
+\setcounter{page}{0}
+
+\maketitle
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\setcounter{page}{0}
+
+% \listoftodos
+% \newpage
+
+\frontmatter
+\include{Declaration/declaration}
+
+\include{Abstract/abstract}
+
+\include{Dedication/dedication}
+
+\include{Acknowledgement/acknowledgement}
+
+\tableofcontents
+
+\newpage
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+% If the list of figure, tables, algorithms is longer than one page, then swap \listoffigures with \addcontentsline{toc}{chapter}{List of Figures} to obtain the correct page number in the table of contents
+
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\newpage
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+
+\newpage
+\include{Acronyms/acronyms}
+
+\include{Publications/Publications}
+
+% ------------------------------------------------------------------------
+\mainmatter
+\renewcommand\baselinestretch{1.2}
+\baselineskip=16pt plus1pt
+\setlength{\parskip}{8pt plus1pt}
+\setcounter{page}{1}
+
+% \part{Introduction}
+\include{Chapters/Ch1-Intro}
+\include{Chapters/Ch2-Background}
+% \include{Chapters/xyz} % include here many more
+\include{Chapters/Ch6-Conclusion}
+
+\newpage
+\bibliographystyle{unsrtnat} %this works with package natbib
+\renewcommand{\bibname}{References} % changes Bibliography to References
+{\small
+\bibliography{References/references}}
+\addcontentsline{toc}{chapter}{References}
+
+\appendix
+\include{Appendix/appendix}
+
+% \layout % prints a page with the sizes of the page variables
+
+\end{document}
