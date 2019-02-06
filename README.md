@@ -15,6 +15,10 @@ Before you try to compile anything, install the fonts:
 git clone https://github.com/tzwenn/ubuntu-latex-fonts.git
 cd ubuntu-latex-fonts
 make PREFIX=~/texmf install
+
+cd ..
+git clone https://github.com/igorbrigadir/insight-templates.git
+cd insight-templates
 ```
 
 Or:
