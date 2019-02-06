@@ -7,6 +7,11 @@ Poster Template is based on [```beamerposter```](http://www-i6.informatik.rwth-a
 
 Note: Templates may change, future versions may break things - don't forget to update the document preamble, otherwise it is safe to overwrite everything else.
 
+Overleaf
+------
+
+Poster Example: https://www.overleaf.com/read/znpzkttmnfbk
+
 Installation Instructions:
 ------
 Before you try to compile anything, install the fonts:
@@ -68,4 +73,4 @@ $ make PREFIX=~/texmf install
 
 -------
 
-Overleaf Example: [ToDo]
+
