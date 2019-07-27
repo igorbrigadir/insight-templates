@@ -1,0 +1,38 @@
+%%% This document is useful for writing up a report of corrections,
+%%% to point to section headings and page numbers with changes.
+%%%
+
+\documentclass{article}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks]{hyperref}
+\usepackage{xr} % for page and section refs
+\externaldocument{.main.tex} % Needs aux file, default in temp folder /home/.cache/gummi/.main.tex.aux, or somewhere else. Should work if the file is open.
+
+\begin{document}
+
+\title{List of Corrections}
+\maketitle
+
+The numbered changes correspond to items raised in the Viva Report.
+
+\section{Abstract/Introduction }
+\textbf{\small
+\begin{enumerate}
+\item Changes requested for Intro.
+\end{enumerate}
+}
+
+Changes:
+ 
+\begin{enumerate}
+\item Changes made in Section \ref{sec:intro2}, page \pageref{sec:intro2}. Added Note on bla, page \pageref{sec:intro2}.
+\end{enumerate}	
+
+Other changes:
+
+\begin{itemize}
+\item Aims and Overview: changed, page \pageref{invisible:aimsoverview}.
+\end{itemize}
+
+
+\end{document}
